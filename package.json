@@ -1,0 +1,47 @@
+{
+  "name": "overlay-ferida",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron --no-sandbox --disable-dev-shm-usage --enable-features=UseOzonePlatform --ozone-platform=x11 .",
+    "build": "electron-builder -wl"
+  },
+  "author": "",
+  "license": "ISC",
+  "build": {
+    "appId": "com.guga.overlayferida",
+    "productName": "Overlay Ferida",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "overlay/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      "overlay/"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "assets/icon.ico"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icon.png"
+    }
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "electron-store": "^11.0.2",
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1"
+  },
+  "type": "module"
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Overlay RPG</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container" id="container">
+    <div class="profile">
+      <img src="" alt="Foto" id="foto" />
+    </div>
+    <div class="status-wrapper">
+      <h1 id="nome"></h1>
+      <div class="status-container">
+      <p>PV</p>
+      <div class="status-bar" id="pv">
+
+      </div>
+    </div>
+    <div class="status-container">
+      <p>PF</p>
+      <div class="status-bar" id="pf">
+
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="overlay.js"></script>
+</body>
+</html>

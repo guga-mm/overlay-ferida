@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Status RPG</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>A Ferida do Mundo</h1>
+  <details open>
+    <summary>Perfil</summary>
+    <div class="card">
+      <label>Nome <input id="nome" type="text" /></label>
+      <label>Foto <input id="foto" type="file" accept="image/*" /></label>
+      <div class="preview">
+        <p>Preview</p>
+        <img id="preview" src="" alt="Preview" style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid white;" />
+      </div>
+    </div>
+  </details>
+  <details open>
+    <summary>Status</summary>
+    <div class="card">
+      <h3>Pontos de Vida</h3>
+      <label>Máximos <input id="pv-max" type="number" /></label>
+      <div class="status-slots" id="pv-atual"></div>
+    </div>
+    <div class="card">
+      <h3>Pontos de Fadiga</h3>
+      <label>Máximos <input id="pf-max" type="number" /></label>
+      <div class="status-slots" id="pf-atual"></div>
+    </div>
+  </details>
+  <p>Coloque no obs: <a href="#">http://localhost:3001/overlay</a></p>
+
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
