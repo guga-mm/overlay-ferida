@@ -18,10 +18,10 @@ body {
 }
 
 .profile img {
-    width: 100px;
-    height: 100px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 3px solid white;
     object-fit: cover;
 }
 
@@ -33,7 +33,7 @@ body {
 
 .status-wrapper h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 5em;
     text-align: start;
 }
 
@@ -45,32 +45,31 @@ body {
 }
 
 .status-container p {
-    margin: 0 10px 0 0;
-    font-size: 20px;
+    margin: 0 0.5em 0 0;
+    font-size: 4em;
 }
 
 .status-bar {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5px;
+    gap: 1em;
 }
 
 .slot {
-    height: 10px;
-    width: 20px;
-    border: 2px solid white;
-    border-radius: 4px;
+    height: 3em;
+    width: 5em;
+    border: 3px solid white;
+    border-radius: 1em;
     position: relative;
 }
 
 .slot.filled::before {
     content: "";
-    display: block;
-    height: 6px;
-    width: 16px;
+    height: calc(3em - 6px);
+    width: calc(5em - 6px);
     background-color: white;
-    border-radius: 1px;
+    border-radius: calc(1em - 6px);
     position: absolute;
     top: 50%;
     left: 50%;
